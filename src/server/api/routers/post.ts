@@ -7,6 +7,7 @@ import {
 } from "~/server/api/trpc";
 import { db } from "~/server/db";
 
+// プロシージャ(エンドポイント)
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
     .input(z.object({ text: z.string() }))
